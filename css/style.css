@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight:normal;
+  font-style:normal;
+}
+
+*{margin:0; padding:0; font-family: 'GangwonEdu_OTFBoldA';}
+ul{list-style:none;}
+a{text-decoration:none; color:#000;}
+img{border:0; vertical-align:top;}
+
+section{
+  width:500px; height:600px;
+  margin:20px auto;
+  text-align:center;
+  border:1px solid transparent;
+  box-sizing:border-box;
+  background-color:rgb(245, 245, 245);
+}
+.title{
+  width:400px; height:30px; margin:15px auto;
+  line-height:40px;
+  background-color:#fff;
+}
+.title h1{
+  font-size:30px;
+}
+.chat{
+  position: relative; margin:auto;
+  width: 440px; height: 100px;
+  padding: 10px; margin-top:20px;
+  background: #FFFFFF;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  box-sizing:border-box;
+}
+.chat:after{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 13px 12px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -13px;
+  left: 183px;
+}
+.chat .cat_say{
+  font-size:20px;
+}
+.img{
+  margin:20px;
+}
+.img img{
+  width:300px; height:auto;
+}
+form .input{
+  display:block; margin:10px auto;
+  width:300px; height:30px;
+  border-radius:20px;
+  border:0px; text-align:center;
+}
+form .btn{
+  width:80px; height:20px;
+  font-size:13px; line-height:20px;
+}
