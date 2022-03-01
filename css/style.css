@@ -68,4 +68,13 @@ form .input{
 form .btn{
   width:80px; height:20px;
   font-size:13px; line-height:20px;
+  border-radius:5px;
+  border:1px solid #fff; background-color:#fff;
+  cursor:pointer;
+}
+form .btn:active{
+  transform: scale(0.98);
+}
+.title,.chat,.input,.btn{
+  box-shadow:0 4px 6px rgba(50, 50, 93, 0.11),0 1px 3px rgba(0, 0, 0, 0.08);
 }
