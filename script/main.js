@@ -22,6 +22,7 @@ let keyword = [
 
 function catSay(){
   event.preventDefault();
+
   const input=document.querySelector(".input");
   const value=document.querySelector(".input").value;
   const reply=document.querySelector(".cat_say");
