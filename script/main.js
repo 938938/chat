@@ -40,5 +40,4 @@ function catSay(){
   };
 };
 
-document.querySelector(".btn").addEventListener("click",catSay);
 document.querySelector("form").addEventListener("submit",catSay);
