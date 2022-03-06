@@ -17,16 +17,25 @@ section{
   margin:20px auto;
   text-align:center;
   border:1px solid transparent;
+  border-radius:20px;
   box-sizing:border-box;
   background-color:rgb(245, 245, 245);
 }
-.title{
+/* .title{
   width:400px; height:30px; margin:15px auto;
   line-height:40px;
   background-color:#fff;
 }
 .title h1{
   font-size:30px;
+} */
+.util{
+  font-size:20px;
+  width:400px; height:30px; margin:15px auto;
+}
+.util i{
+  margin:0 10px;
+  cursor:pointer;
 }
 .chat{
   position: relative; margin:auto;
