@@ -13,31 +13,30 @@
   <section>
     <div class="login hidden">
       <form action="" class="login-form">
-        <input type="text" placeholder="제가 뭐라고 부르면 될까요?">
+        <input type="text" placeholder="제가 뭐라고 부르면 될까요?" required>
         <button>Enter</button>
       </form>
     </div>
     <div class="util">
-      <i class="fas fa-list" title="Todo-list"></i>
-      <i class="far fa-calendar-check" title="D-day"></i>
+      <i class="fas fa-list todo-btn" title="Todo-list"></i>
+    </div>
+    <div class="clock">
+      <span></span>
     </div>
     <div class="chat">
-      <p class="cat_say">
-        <span></span><br>
-        <span></span>
-      </p>
+      <p class="cat_say"></p>
     </div>
     <div class="img">
       <img src="images/cat.png" alt="고양이 이미지">
     </div>
-    <form action="">
+    <form action="" class="chat-form">
       <input type="text" class="input" placeholder="이곳에 메세지를 입력해주세요">
       <button class="btn">입력</button>
     </form>
-    <div class="todo">
+    <div class="todo hidden">
       <h3>ToDo List</h3>
       <form action="" class="todo-form">
-        <input type="text" class="todo-input" required>
+        <input type="text" class="todo-input" required placeholder="할 일을 입력해주세요">
         <button>입력</button>
       </form>
       <ul class="todo-list"></ul>
@@ -45,6 +44,7 @@
   </section>
   <script src="script/open.js"></script>
   <script src="script/main.js"></script>
+  <script src="script/chat.js"></script>
   <script src="script/clock.js"></script>
   <script src="script/todo.js"></script>
 </body>
