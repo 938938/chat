@@ -60,6 +60,7 @@ function catSay(){
 
   if(value.includes("날씨")){
     reply.innerText="잠시만 기다려주세요";
+    input.value=null;
     getWeather();
     return;
   };
