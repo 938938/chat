@@ -141,6 +141,7 @@ form .btn:active{
 .todo .todo-list li{
   width:255px; height:30px; text-align:left;
   position:relative; padding:5px; box-sizing:border-box; line-height:30px;
+  border-bottom:1px solid black;
 }
 .todo .todo-list li button{
   position:absolute; right:5px;

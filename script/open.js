@@ -4,22 +4,22 @@ const loginInput = document.querySelector(".login-form input");
 const reply = document.querySelector(".cat_say");
 
 const HIDDEN_CLASS = "hidden";
-const USERNAME_KEY = "username";
+const USERID_KEY = "userid";
 
 function onLogin(event){
   event.preventDefault();
-  const userName = loginInput.value;
+  const userId = loginInput.value;
   login.classList.add(HIDDEN_CLASS);
-  localStorage.setItem(USERNAME_KEY,userName);
-  console.log(userName);
-  setLogin(userName);
+  localStorage.setItem(USERID_KEY,userId);
+  console.log(userId);
+  setLogin(userId);
 }
 
-function setLogin(username){
-  reply.innerText = `안녕하세요, ${username}님!`
+function setLogin(userid){
+  reply.innerText = `안녕하세요, ${userid}님!`
 }
 
-const savedUserName = localStorage.getItem(USERNAME_KEY);
+const savedUserName = localStorage.getItem(USERID_KEY);
 
 if(savedUserName===null){
   login.classList.remove(HIDDEN_CLASS);
