@@ -1,3 +1,53 @@
+const login = document.querySelector(".login");
+const loginForm = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form input");
+const reply = document.querySelector(".cat_say");
+
+const HIDDEN_CLASS = "hidden";
+const USERID_KEY = "userid";
+
+function onLogin(event){
+  event.preventDefault();
+  const userId = loginInput.value;
+  login.classList.add(HIDDEN_CLASS);
+  localStorage.setItem(USERID_KEY,userId);
+  console.log(userId);
+  setLogin(userId);
+}
+
+const typewriter = new Typewriter(reply, {
+  loop: false,
+});
+
+const writer =   typewriter
+.deleteAll()
+.typeString(text)
+.pauseFor(500)
+.start();
+
+let text = "";
+
+function setLogin(userid){
+  text = `안녕하세요, ${userid}님!`;
+  writer;
+  // typewriter
+  // .deleteAll()
+  // .typeString(`안녕하세요, ${userid}님!`)
+  // .pauseFor(500)
+  // .start();
+}
+
+const savedUserName = localStorage.getItem(USERID_KEY);
+
+if(savedUserName===null){
+  login.classList.remove(HIDDEN_CLASS);
+  loginForm.addEventListener("submit",onLogin);
+} else {
+  setLogin(savedUserName);
+}
+
+////
+
 function getWeather(){
   const API_KEY = "251d7389c51322971da347c975ef7afb";
 
@@ -52,7 +102,12 @@ function catSay(){
 
   for(let i = 0; i<keyword.length; i++){
     if(value==keyword[i].question){
-      reply.innerText=keyword[i].answer;
+      typewriter
+      .deleteAll()
+      .typeString(keyword[i].answer)
+      .pauseFor(500)
+      .start();
+      // reply.innerText=keyword[i].answer;
       input.value=null;
       return;
     }

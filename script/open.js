@@ -15,8 +15,16 @@ function onLogin(event){
   setLogin(userId);
 }
 
+const typewriter = new Typewriter(reply, {
+  loop: false,
+});
+
 function setLogin(userid){
-  reply.innerText = `안녕하세요, ${userid}님!`
+  typewriter
+  .deleteAll()
+  .typeString(`안녕하세요, ${userid}님!`)
+  .pauseFor(500)
+  .start();
 }
 
 const savedUserName = localStorage.getItem(USERID_KEY);
