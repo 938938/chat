@@ -15,6 +15,7 @@ function deleteToDo(event) {
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
+  toDoCount.innerHTML = toDoList.childElementCount;
 }
 
 function paintToDo(newTodo) {
@@ -41,6 +42,7 @@ function handleToDoSubmit(event) {
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveToDos();
+  toDoCount.innerHTML = toDoList.childElementCount;
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
@@ -51,4 +53,5 @@ if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
+  toDoCount.innerHTML = toDoList.childElementCount;
 }
