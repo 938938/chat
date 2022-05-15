@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector(".todo-form");
 const toDoInput = document.querySelector(".todo-input");
 const toDoList = document.querySelector(".todo-list");
+const toDoCount = document.querySelector(".todo-count span");
 
 const TODOS_KEY = "todos";
 
@@ -9,7 +10,6 @@ let toDos = [];
 function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
-
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
