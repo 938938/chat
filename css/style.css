@@ -122,14 +122,20 @@ form .btn:active{
   font-size:18px; padding:20px; box-sizing:border-box;
   border-radius:5px 0 0 5px;
 }
+.todo .todo-count{
+  position:absolute; top:25px; right:20px;
+  font-size:15px;
+}
 .todo .todo-form input{
-  width:200px;
+  width:200px; height:20px;
   background-color:transparent;
   border:0px; border-bottom:1px solid black;
+  padding-top:5px; font-size:15px;
 }
 .todo .todo-form button{
-  width:40px; height:15px; font-size:13px;
+  width:50px; height:18px; font-size:13px;
   background-color:white; border:0px; border-radius:5px;
+  cursor:pointer;
 }
 .todo .todo-form button:active{
   transform: scale(0.98);
